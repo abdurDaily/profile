@@ -1,0 +1,101 @@
+/* =============== CSS COMMON START ====================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1320px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+:root{
+    --black:#02050A;
+    --light-black:#141C27;  
+    --common-clr:#55E6A5;
+    --white:#FFFFFF;
+    --commone-fonts: "Poppins", sans-serif;
+}
+/* =============== CSS COMMON END ======================*/
+
+/* =============== NAV START ====================*/
+nav{
+    background-color: var(--black);
+    height: 80px;
+}
+nav .container{
+    background-color: var(--light-black);
+    height: 100%;
+}
+nav .row{
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: var(--white) !important;
+    text-transform: uppercase;
+    padding: 0 15px;
+    display: inline-block;
+    font-family: var(--commone-fonts);
+    font-weight: 400;
+    transition: 0.3s;
+    position: relative;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -28px;
+    transition: 0.3s;
+    background-color: var(--common-clr);
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+nav ul li .active{
+    color: var(--common-clr) !important;
+}
+nav ul li a:hover{
+    color: var(--common-clr) !important;
+
+}
+nav .mobile-btn{
+    background-color: var(--common-clr);
+    border: none;
+    outline: none;
+    width: 80px;
+    height: 100%;
+    transition: 0.2s ;
+}
+nav .mobile-btn:hover{
+    background-color: var(--light-black);
+    color: var(--common-clr);
+}
+nav .mobile-btn-icon i{
+    font-size: 30px;
+    font-weight: 800;
+}
+.offcanvas{
+    background-color: var(--black);
+}
+.dropdown-toggle::after {
+    display: none;
+}
+/* =============== NAV END ======================*/
+
