@@ -1,101 +1,301 @@
 /* =============== CSS COMMON START ====================*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
-ul,ol{
-    list-style-type: none;
+
+ul,
+ol {
+  list-style-type: none;
 }
-a{
-    text-decoration: none;
+
+a {
+  text-decoration: none;
 }
-.container{
-    width: 1320px;
-    margin: auto;
+
+.container {
+  width: 1300px;
+  margin: auto;
 }
-.row{
-    display: flex;
-    flex-wrap: wrap;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
-:root{
-    --black:#02050A;
-    --light-black:#141C27;  
-    --common-clr:#55E6A5;
-    --white:#FFFFFF;
-    --commone-fonts: "Poppins", sans-serif;
+
+:root {
+  --black: #02050a;
+  --light-black: #141c27;
+  --common-clr: #55e6a5;
+  --white: #ffffff;
+  --commone-fonts: "Poppins", sans-serif;
+  --offwite:#A2A2A2;
 }
+
 /* =============== CSS COMMON END ======================*/
 
 /* =============== NAV START ====================*/
-nav{
-    background-color: var(--black);
-    height: 80px;
+nav {
+  background-color: var(--black);
+  height: 80px;
 }
-nav .container{
-    background-color: var(--light-black);
-    height: 100%;
-}
-nav .row{
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-}
-nav ul li{
-    margin: 0 5px;
-}
-nav ul li a{
-    color: var(--white) !important;
-    text-transform: uppercase;
-    padding: 0 15px;
-    display: inline-block;
-    font-family: var(--commone-fonts);
-    font-weight: 400;
-    transition: 0.3s;
-    position: relative;
-}
-nav ul li a::before{
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    left: 0;
-    bottom: -28px;
-    transition: 0.3s;
-    background-color: var(--common-clr);
-}
-nav ul li a:hover::before{
-    width: 100%;
-}
-nav ul li .active{
-    color: var(--common-clr) !important;
-}
-nav ul li a:hover{
-    color: var(--common-clr) !important;
 
+nav .navbar-brand {
+  padding: 0 !important;
 }
-nav .mobile-btn{
-    background-color: var(--common-clr);
-    border: none;
-    outline: none;
-    width: 80px;
-    height: 100%;
-    transition: 0.2s ;
+
+nav .container {
+  background-color: var(--light-black);
+  height: 100%;
 }
-nav .mobile-btn:hover{
-    background-color: var(--light-black);
-    color: var(--common-clr);
+
+nav .row {
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
 }
-nav .mobile-btn-icon i{
-    font-size: 30px;
-    font-weight: 800;
+
+nav ul li {
+  margin: 0 5px;
 }
-.offcanvas{
-    background-color: var(--black);
+
+nav ul li a {
+  color: var(--white) !important;
+  text-transform: uppercase;
+  padding: 0 15px;
+  display: inline-block;
+  font-family: var(--commone-fonts);
+  font-weight: 400;
+  transition: 0.3s;
+  position: relative;
 }
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -28px;
+  transition: 0.3s;
+  background-color: var(--common-clr);
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+nav ul li .active {
+  color: var(--common-clr) !important;
+}
+
+nav ul li a:hover {
+  color: var(--common-clr) !important;
+}
+
+nav .mobile-btn {
+  background-color: var(--common-clr);
+  border: none;
+  outline: none;
+  width: 80px;
+  height: 80px;
+  transition: 0.2s;
+}
+
+nav .mobile-btn:hover {
+  background-color: var(--light-black);
+  color: var(--common-clr);
+}
+
+nav .mobile-btn-icon i {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.offcanvas {
+  background-color: var(--black);
+}
+
 .dropdown-toggle::after {
-    display: none;
+  display: none;
 }
+
+/*================= OFFCANVA-START================ */
+.offcanvas .offcanvas-header {
+  padding: 10px 20px;
+  border-bottom: 0.5px solid var(--common-clr);
+}
+
+.offcanvas .offcanvas-header img {
+  height: 60px;
+}
+
+.offcanvas .mobile-cross-btn {
+  width: 60px;
+  height: 60px;
+  color: var(--common-clr);
+  display: inline-block;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.offcanvas .offcanvas-body ul li a {
+  padding: 10px;
+  color: var(--white);
+  /* background-color: #55E6A5; */
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  border-bottom: 1px solid var(--common-clr);
+  text-transform: uppercase;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.offcanvas .offcanvas-body ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background-color: var(--common-clr);
+  left: 0;
+  top: 0;
+  z-index: -2;
+  transition: 0.3s;
+}
+
+.offcanvas .offcanvas-body ul li a:hover::before {
+  height: 100%;
+}
+
+/*==================== OFFCANVA-END ===================*/
 /* =============== NAV END ======================*/
 
+
+
+/* =============== BANNER START ====================*/
+#banner{
+    height: 100vh;
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#banner .container {
+    padding-top: 20px;
+}
+#banner .container .contains{
+    width: 530px;
+    padding: 100px 0 0 0;
+    overflow: hidden;
+}
+#banner .container .contains h1{
+    font-size: 60px;
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-family: var(--commone-fonts);
+}
+#banner .container .contains h1 span{
+    color: var(--common-clr);
+}
+#banner .container .contains p{
+    color: var(--offwite);
+}
+#banner .container .contains button{
+    padding: 20px 40px;
+    border: none;
+    background-color: var(--common-clr);
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 30px 25px 0 0;
+}
+#banner .container .contains a{
+    color: var(--white);
+    font-size: 18px;
+    font-family: var(--commone-fonts);
+}
+#banner .container  .img-layer img{
+    width: 100%;
+    height: 100%;
+    inset: 50px;
+    display: inline-block;
+    /* padding: 10px; */
+}
+#banner .container  .img-layer {
+    position: relative;
+    padding: 35px;
+}
+#banner .container  .img-layer::after{
+    content: "";
+    position: absolute;
+    background: url('../images/__after.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: banner 1s  infinite alternate;
+    -webkit-animation: banner 1s  infinite alternate;
+}
+@keyframes banner{
+    from{
+        margin-top: -5px;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+#banner .container .contains button{
+    position: relative;
+}
+#banner .container .contains button::after{
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* border:1px solid var(--white); */
+  color: var(--black);
+  text-align: center;
+  padding: 20px 0 ;
+  left: 0;
+  top: 0;
+  background-color: var(--white);
+  mask: url('https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png');
+  mask-size: 3500% 100%;
+  z-index: 10;
+  animation: banner-btn 0.7s  forwards steps(29);
+}
+#banner .container .contains button:hover::after {
+    animation: reverse-banner-btn 0.7s  forwards steps(29);
+
+}
+@keyframes banner-btn{
+    from{
+       mask-position: 0% 0%;
+    }
+    to{
+        mask-position: 100% 0%;
+    }
+}
+@keyframes reverse-banner-btn{
+    from{
+       mask-position: 100% 0%;
+    }
+    to{
+        mask-position: 0% 0%;
+    }
+}
+/* =============== BANNER END ======================*/

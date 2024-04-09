@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
     <!-- FONT AWSOME -->
     <link rel="stylesheet" href="./assets/css/font-awsome.css"/>
     <!-- BOOTSTRAP 5  -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- RESPONSIVE  CSS -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     
@@ -24,9 +25,6 @@
           <a class="navbar-brand" href="#">
             <img src="./assets/images/abdurdaily.png" alt="">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav m-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
@@ -48,53 +46,87 @@
               </li>
             </ul>
         </div>
-
             <!-- OFFCANVAS -->
-            <button class="d-sm-none d-md-block mobile-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button class="mobile-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <span class="mobile-btn-icon"><i class="fa-solid fa-bars"></i></span>
             </button>
-
-            
-            <!-- OFFCANVAS END-->
-            
-            
+            <!-- OFFCANVAS END-->   
         </div>
-      </nav>
+    </nav>
     <!-- =============== NAV END ======================== -->
 
 
+    <!-- =============== BOOTSTRAP OFFCANVAS BODY START ==================== -->
     <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <div class="offcanvas-header d-flex justify-content-between w-100">
+        <div class="offcanvas-header d-flex justify-content-between w-100">
             <img src="./assets/images/abdurdaily.png" alt="abdurdaily">
-            <button type="button" class="btn-close bg-info" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
+            <span class="mobile-cross-btn" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-circle-xmark"></i></span>
+            <!-- <button type="button" class="btn-close bg-info" ></button> -->
         </div>
         <div class="offcanvas-body">
-            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class=" active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#">ABOUT ME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                SERVICE'S
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#">BLOGS</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="#">CONTACT</a>
+            </li>
+          </ul>
         </div>
     </div>
+    <!-- =============== BOOTSTRAP OFFCANVAS BODY END ======================== -->
+
+
+
+    <!-- =============== BANNER START ==================== -->
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="contains">
+              <h1>Hi, I'm ABDUR!
+                Creative web  </h1>
+                <h1><span class="auto_type"></span> </h1>
+                
+                <p>I'm a passionate UI/UX designer with a mission to create delightful and
+                  intuitive digital experiences. With a strong foundation in design principles and
+                  a keen eye for detail, I specialize in translating complex ideas into user-
+                  friendly interfaces that captivate and engage.</p>
+                  <div class="banner-btn">
+                    <button data-text="Download Cv">Download Cv</button>
+                    <a href="#">
+                      <img src="./assets/images/video.png" alt=""> &nbsp; Wath The Video
+                    </a>
+                  </div>
+            </div>
+          </div>
+          <div class="col-lg-5 img-layer d-lg-none d-xl-block">
+            <img class="img-fluid" src="./assets/images/image (1).png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============== BANNER END ======================== -->
+
+
 
 
     <!-- BOOTSTRAP 5 JS -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- TYPED JS -->
+    <script src="./assets/js/typed.umd.js"></script>
     <!-- CUSTOM JS -->
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
