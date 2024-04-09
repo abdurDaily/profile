@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--commone-fonts);
   /* outline: 1px solid red; */
 }
 
@@ -13,11 +14,6 @@ ol {
 
 a {
   text-decoration: none;
-}
-
-.container {
-  width: 1300px;
-  margin: auto;
 }
 
 .row {
@@ -31,7 +27,7 @@ a {
   --common-clr: #55e6a5;
   --white: #ffffff;
   --commone-fonts: "Poppins", sans-serif;
-  --offwite:#A2A2A2;
+  --offwite: #a2a2a2;
 }
 
 /* =============== CSS COMMON END ======================*/
@@ -176,126 +172,206 @@ nav .mobile-btn-icon i {
 /*==================== OFFCANVA-END ===================*/
 /* =============== NAV END ======================*/
 
-
-
 /* =============== BANNER START ====================*/
-#banner{
-    height: 100vh;
-    background-image: url('../images/banner.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+#banner {
+  height: 700px;
+  background-image: url("../images/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 #banner .container {
-    padding-top: 20px;
+  padding-top: 20px;
 }
-#banner .container .contains{
-    width: 530px;
-    padding: 100px 0 0 0;
-    overflow: hidden;
+#banner .container .contains {
+  padding: 100px 0 0 0;
+  overflow: hidden;
 }
-#banner .container .contains h1{
-    font-size: 60px;
-    color: var(--white);
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.2;
-    font-family: var(--commone-fonts);
+#banner .container .contains h1 {
+  font-size: 60px;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: var(--commone-fonts);
 }
-#banner .container .contains h1 span{
-    color: var(--common-clr);
+#banner .container .contains h1 span {
+  color: var(--common-clr);
 }
-#banner .container .contains p{
-    color: var(--offwite);
+#banner .container .contains p {
+  color: var(--offwite);
+  text-align: justify;
 }
-#banner .container .contains button{
-    padding: 20px 40px;
-    border: none;
-    background-color: var(--common-clr);
-    color: var(--black);
-    font-size: 20px;
-    font-weight: 500;
-    display: inline-block;
-    margin: 30px 25px 0 0;
+#banner .container .contains button {
+  padding: 20px 40px;
+  border: none;
+  background-color: var(--common-clr);
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 30px 25px 0 0;
 }
-#banner .container .contains a{
-    color: var(--white);
-    font-size: 18px;
-    font-family: var(--commone-fonts);
+#banner .container .contains a {
+  color: var(--white);
+  font-size: 18px;
+  font-family: var(--commone-fonts);
+  transition: 0.3s;
 }
-#banner .container  .img-layer img{
-    width: 100%;
-    height: 100%;
-    inset: 50px;
-    display: inline-block;
-    /* padding: 10px; */
+#banner .container .contains a:hover {
+  color: var(--common-clr);
 }
-#banner .container  .img-layer {
-    position: relative;
-    padding: 35px;
+#banner .container .img-layer img {
+  width: 100%;
+  height: 100%;
+  inset: 50px;
+  display: inline-block;
 }
-#banner .container  .img-layer::after{
-    content: "";
-    position: absolute;
-    background: url('../images/__after.png');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    animation: banner 1s  infinite alternate;
-    -webkit-animation: banner 1s  infinite alternate;
+#banner .container .img-layer {
+  position: relative;
+  padding: 30px;
 }
-@keyframes banner{
-    from{
-        margin-top: -5px;
-    }
-    to{
-        margin-top: 0;
-    }
+#banner .container .img-layer::after {
+  content: "";
+  position: absolute;
+  background: url("../images/__after.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: banner 1s infinite alternate;
+  -webkit-animation: banner 1s infinite alternate;
 }
-#banner .container .contains button{
-    position: relative;
+@keyframes banner {
+  from {
+    margin-top: -5px;
+  }
+  to {
+    margin-top: 0;
+  }
 }
-#banner .container .contains button::after{
+#banner .container .contains button {
+  position: relative;
+}
+#banner .container .contains button::after {
   content: attr(data-text);
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  /* border:1px solid var(--white); */
   color: var(--black);
   text-align: center;
-  padding: 20px 0 ;
+  padding: 20px 0;
   left: 0;
   top: 0;
   background-color: var(--white);
-  mask: url('https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png');
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
   mask-size: 3500% 100%;
   z-index: 10;
-  animation: banner-btn 0.7s  forwards steps(29);
+  animation: banner-btn 0.7s forwards steps(29);
 }
 #banner .container .contains button:hover::after {
-    animation: reverse-banner-btn 0.7s  forwards steps(29);
-
+  animation: reverse-banner-btn 0.7s forwards steps(29);
 }
-@keyframes banner-btn{
-    from{
-       mask-position: 0% 0%;
-    }
-    to{
-        mask-position: 100% 0%;
-    }
+@keyframes banner-btn {
+  from {
+    mask-position: 0% 0%;
+  }
+  to {
+    mask-position: 100% 0%;
+  }
 }
-@keyframes reverse-banner-btn{
-    from{
-       mask-position: 100% 0%;
-    }
-    to{
-        mask-position: 0% 0%;
-    }
+@keyframes reverse-banner-btn {
+  from {
+    mask-position: 100% 0%;
+  }
+  to {
+    mask-position: 0% 0%;
+  }
 }
 /* =============== BANNER END ======================*/
+
+/* =============== SERVICE START ====================*/
+#service {
+  padding: 100px 0 100px 0;
+}
+#service .service-header h1{
+  color: var(--common-clr);
+  font-weight: 700;
+}
+#service .row{
+  padding-top: 50px;
+}
+#service .card {
+  position: relative;
+  border: none;
+  background: var(--white);
+  padding: 20px;
+  text-align: center;
+  box-shadow:  22px 22px 50px #bababa7b,
+  -22px -22px 50px #ffffff;
+}
+#service .card::after{
+  content: "";
+  position: absolute;
+  transition: 0.3s;
+  height: 0%;
+  width: 5px;
+  left: 0;
+  top: 0;
+  background-color: var(--common-clr);
+}
+#service .card:hover::after{
+  height: 100%;
+}
+#service .card span{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--common-clr);
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+background: linear-gradient(145deg, #fff, #f0f0f0);
+box-shadow:  22px 22px 44px #bababa;
+border: 3px solid var(--common-clr);
+
+}
+
+#service .card .service-contains{
+  padding-top: 30px;
+}
+#service .card .service-contains a{
+  width: 100%;
+  /* background-color: var(--common-clr); */
+  display: block;
+  padding: 10px;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+  color: var(--black) ;
+  border: 2px solid var(--common-clr);
+}
+#service .card .service-contains a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--common-clr);
+  transition: 0.5s;
+  z-index: -1;
+}
+#service .card .service-contains a:hover::after{
+  width: 0%;
+}
+/* =============== SERVICE END ======================*/
