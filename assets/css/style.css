@@ -392,38 +392,13 @@ border: 3px solid var(--common-clr);
   display: inline-block ;
   color: transparent;
   -webkit-text-stroke-width:1px;
-  -webkit-text-stroke-color:var(--white);
+  -webkit-text-stroke-color:var(--black);
   font-size: 110px;
   font-weight: 700;
   padding: 0 20px;
   animation: text_strock 22s  infinite linear normal none running;
 }
-@keyframes text_strock {
-  0%{
-    transform: translateX(0%);
-  }
-  30%{
-    transform: translateX(-30%);
-  }
-  50%{
-    transform: translateX(-60%);
-  }
-  60%{
-    transform: translateX(-700%);
-  }
-  70%{
-    transform: translateX(-80%);
-  }
-  80%{
-    transform: translateX(-200%);
-  }
-  90%{
-  transform: translateX(-90%);
-  }
-  100%{
-  transform: translateX(-100%);
-  }
-}
+
 /* =============== CSS TEXT STROCK END ======================*/
 
 

@@ -19,7 +19,6 @@ window.addEventListener('scroll', function(){
   }else{
     progress.classList.add("prgress_active");
     progress.style.background = `conic-gradient(#55e6a5 ${scrollValue}%, black ${scrollValue}%)`;
-    // progressValue.textContent = scrollValue;
   }
 });
 
@@ -41,3 +40,19 @@ window.addEventListener('mousemove', function(e){
   cursoreOutline.style.top =  `${posY}px`;
 
 })
+
+
+
+// TEXT STROCK
+  $(function(){
+  
+    $('#text_strock').marquee({
+      speed: 300,
+      gap: 2750,
+      delayBeforeStart: 0,
+      direction: 'left',
+      duplicated: true,
+      
+    });
+    
+  });
